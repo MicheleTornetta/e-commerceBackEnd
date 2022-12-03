@@ -8,10 +8,16 @@
  7.  installed sequelize
  8.  added dotenv to server.js
  9.  server working
- 10. created Category model
+ 10. updated Category model
+ 11. updated product model - troubleshooting needed
+ 12. updated tag
+ 13.  `Product` belongs to `Category`, and `Category` has many `Product` models, as a category can have multiple products but a product can only belong to one category.
+ 14.  Product model - stock # default of 10.
+ 15.  Product model - category_id References the `Category` model's `id`.
 
 --Issues
-1.  Product model - Validates that the value is a decimal.
+1.  
+3.  ProductTag model -     * References the `Product` model's `id` & tag id
 
 
 Database 
