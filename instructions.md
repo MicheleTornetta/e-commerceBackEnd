@@ -1,15 +1,17 @@
 --Completed:
  1   ecommerce_db; created
  2   connection.js complete
- 3.  env complete
+ 3.  env creation complete
  4.  installed express
  5.  installed dotenv
  6.  installed mysql2
  7.  installed sequelize
  8.  added dotenv to server.js
+ 9.  server working
+ 10. created Category model
 
 --Issues
-1.  Can't find server?
+1.  Product model - Validates that the value is a decimal.
 
 
 Database 
