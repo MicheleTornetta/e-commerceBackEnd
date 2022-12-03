@@ -1,4 +1,13 @@
-# 13 Object-Relational Mapping (ORM): E-Commerce Back End
+--Completed:
+ 1   ecommerce_db; created
+ 2   connection.js complete
+ 3.  env complete
+ 4.  installed express
+ 5.  installed dotenv
+ 6.  installed mysql2
+ 7.  installed sequelize
+
+Database 
 
 ## Your Task
 
@@ -6,13 +15,14 @@ Your task is to build the back end for an e-commerce site by modifying starter c
 
 1.  You’ll configure a working Express.js API to use Sequelize to interact with a MySQL database.
 
--You’ll need to submit a link to the video and add it to the readme of your project.
+
 
 ## Acceptance Criteria
 
 ```md
 GIVEN a functional Express.js API
 WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
+
 THEN I am able to connect to a database using Sequelize
 WHEN I enter schema and seed commands
 THEN a development database is created and is seeded with test data
@@ -228,19 +238,7 @@ This Challenge is graded based on the following criteria:
 
   * Includes model associations outlined in the Challenge instructions.
 
-### Repository Quality: 13%
 
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme with description and a link to a walkthrough video.
-
-## Review
 
 You are required to submit BOTH of the following for review:
 
@@ -248,5 +246,4 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
 
----
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+

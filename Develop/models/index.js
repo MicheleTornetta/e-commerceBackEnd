@@ -15,29 +15,29 @@ Product.belongsTo(Category, {
 
 // Categories have many Products
 
-Categories.HasMany(Product, {
+Category.hasMany(Product, {
   foreignKey: 'product_id',
   // When we delete a category, delete the associated product.
   onDelete: 'CASCADE',
 });
 
 // We can also define the association starting with License
-Product.HasOne(Categroy, {
+Product.hasOne(Category, {
   foreignKey: 'product_id',
   onDelete: 'CASCADE',
 });
 
-// Products belongToMany Tags (through ProductTag)
+// Products belongToMany Tags (through ProductTag) **********HELP*********
 
-Product.BelongsToMany(ProductTag, {
+Product.belongsToMany(ProductTag, {
   foreignKey: 'product_id',
   onDelete: 'CASCADE',
 });
 
 
-// Tags belongToMany Products (through ProductTag)
+// Tags belongToMany Products (through ProductTag) **********HELP*********
 
-/*Tag.BelongsToMany(ProductTag, {
+/*Tag BelongsToMany(ProductTag, {
   foreignKey: 'product_id',
   onDelete: 'CASCADE',
 });*/
