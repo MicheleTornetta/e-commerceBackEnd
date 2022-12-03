@@ -6,6 +6,11 @@
  5.  installed dotenv
  6.  installed mysql2
  7.  installed sequelize
+ 8.  added dotenv to server.js
+
+--Issues
+1.  Can't find server?
+
 
 Database 
 
