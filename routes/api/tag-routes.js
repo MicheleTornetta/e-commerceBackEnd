@@ -6,13 +6,30 @@ const { Tag, Product, ProductTag } = require('../../models');
 router.get('/', (req, res) => {
   // find all tags
   // be sure to include its associated Product data
+  const results = await Tag.findAll({
+    include: [{
+      model: Product,
+    }]
 });
 
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
+  const id = req.params.id;
+  const results = await Tag.findOne({
+    include: [{
+      model: Product,
+    }],
+    where: {
+      id: id
+    }
+  });
 });
 
+  res.send(JSON.stringify(results));
+  });
+
+// create new tag
 router.post('/', async (req, res) => {
   const name = req.body.tag_name;
 
@@ -42,7 +59,23 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+  const id = req.params.id;
   // delete on tag by its `id` value
+  const tagDeleted = await Tag.destroy({
+    where: {
+      id: id
+    }
+  });
+
+  res.send(JSON.stringify({
+    deleted: tagDeleted
+  }));
 });
 
+//res.send(JSON.stringify({
+//  deleted: tagDeleted
+//}));
+
+
 module.exports = router;
+
