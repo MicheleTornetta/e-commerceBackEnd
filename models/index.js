@@ -23,7 +23,7 @@ const { Sequelize } = require('sequelize');
 
 // We can also define the association starting with License
 Product.belongsTo(Category, {
-  foreignKey: 'category_id',
+  // foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
 Category.hasMany(Product);
@@ -57,9 +57,23 @@ Category.hasMany(Product);
 // });
 // ProductTag.hasMany(Product);
 
+Product.hasMany(ProductTag, {
+});
+ProductTag.belongsTo(Product, {
+});
+
+Tag.hasMany(ProductTag, {
+});
+ProductTag.belongsTo(Tag, {
+});
+
+// ProductTag.hasOne(Tag);
+// Tag.hasMany(ProductTag);
+
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
+
   }
 });
 

@@ -8,7 +8,7 @@ Category.init(
   {
     // define fields/columns on model
     // if created by sequelize
-    category_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

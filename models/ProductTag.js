@@ -10,18 +10,18 @@ ProductTag.init(
   {
     // define columns
     // define columns
-    productTag_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    // product_id: {
-    //   type: DataTypes.INTEGER,
-    // },
-    // tag_id: {
-    //   type: DataTypes.INTEGER,
-    // },
+    product_id: {
+      type: DataTypes.INTEGER,
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+    },
   },
   {
     sequelize,

@@ -10,7 +10,7 @@ class Product extends Model {}
 Product.init(
   {
     //format columm titles
-    product_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

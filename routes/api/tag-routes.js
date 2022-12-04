@@ -13,12 +13,32 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Product data
 });
 
-router.post('/', (req, res) => {
-  // create a new tag
+router.post('/', async (req, res) => {
+  const name = req.body.tag_name;
+
+  const tag = await Tag.create({
+    tag_name: name
+  });
+
+  res.send(JSON.stringify(tag));
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
+  const name = req.body.tag_name;
+  const id = req.params.id;
+
+  const result = await Tag.update({
+    tag_name: name
+  }, {
+    where: {
+      id: id
+    }
+  });
+
+  res.send(JSON.stringify({
+    effectedRows: result[0]
+  }));
 });
 
 router.delete('/:id', (req, res) => {
