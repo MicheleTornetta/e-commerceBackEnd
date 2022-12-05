@@ -43,10 +43,11 @@ router.get('/:id', async (req, res) => {
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
+      "product_name": "Basketball",
+      "price": 200.00,
+      "stock": 3,
+      "category_id": 2,
+      "tagIds": [1, 2, 3, 4]
     }
   */
   Product.create(req.body)
@@ -73,6 +74,16 @@ router.post('/', (req, res) => {
 
 // update product
 router.put('/:id', (req, res) => {
+  /*
+{		
+	"product_name": "Baseball",
+	"price": 300.00,
+	"stock": 4,
+  "category_id": 2,
+	"tagIds": [1, 2, 4]
+}
+  */
+
   // update product data
   Product.update(req.body, {
     where: {

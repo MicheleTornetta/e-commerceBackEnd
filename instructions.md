@@ -13,11 +13,15 @@
  12. updated tag
  13.  `Product` belongs to `Category`, and `Category` has many `Product` models, as a category can have multiple products but a product can only belong to one category.
  14.  Product model - stock # default of 10.
- 15.  Product model - category_id References the `Category` model's `id`.
+
 
 --Issues
 1.  
 3.  ProductTag model -     * References the `Product` model's `id` & tag id
+4.  Product model - category_id References the `Category` model's `id`.
+5.  test routes
+6.  review instructions to ensure not missing anything
+7.  video results
 
 
 Database 
@@ -27,7 +31,7 @@ Database
 Your task is to build the back end for an e-commerce site by modifying starter code. 
 
 
-THEN I am able to connect to a database using Sequelize
+DONE ---  able to connect to a database using Sequelize
 WHEN I enter schema and seed commands
 THEN a development database is created and is seeded with test data  npm run seed
 WHEN I enter the command to invoke the application

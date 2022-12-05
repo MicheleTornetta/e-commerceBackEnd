@@ -10,6 +10,9 @@ router.get('/', async (req, res) => {
     include: [{
       model: Product,
     }]
+  });
+
+  res.send(JSON.stringify(results));
 });
 
 router.get('/:id', async (req, res) => {
@@ -24,10 +27,9 @@ router.get('/:id', async (req, res) => {
       id: id
     }
   });
-});
-
+  
   res.send(JSON.stringify(results));
-  });
+});
 
 // create new tag
 router.post('/', async (req, res) => {

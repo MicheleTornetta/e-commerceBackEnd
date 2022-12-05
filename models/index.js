@@ -57,26 +57,22 @@ Category.hasMany(Product);
 // });
 // ProductTag.hasMany(Product);
 
-Product.hasMany(ProductTag, {
-});
-ProductTag.belongsTo(Product, {
-});
+Product.hasMany(ProductTag);
+ProductTag.belongsTo(Product);
 
-Tag.hasMany(ProductTag, {
-});
-ProductTag.belongsTo(Tag, {
-});
-
-// ProductTag.hasOne(Tag);
-// Tag.hasMany(ProductTag);
+Tag.hasMany(ProductTag);
+ProductTag.belongsTo(Tag);
 
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
-
   }
 });
-
+Tag.belongsToMany(Product, {
+  through: {
+    model: ProductTag
+  }
+});
 
 module.exports = {
   Product,
