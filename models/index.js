@@ -28,40 +28,13 @@ Product.belongsTo(Category, {
 });
 Category.hasMany(Product);
 
-// Products belongToMany Tags (through ProductTag) **********HELP*********
-
-// Product.belongsToMany(ProductTag, {
-//   foreignKey: 'product_id',
-//   onDelete: 'CASCADE',
-// });
-
-
-// Tags belongToMany Products (through ProductTag) **********HELP*********
-
-/*Tag BelongsToMany(ProductTag, {
-  foreignKey: 'product_id',
-  onDelete: 'CASCADE',
-});*/
-
-
-// ProductTag.hasOne(Product, {
-//   foreignKey: {
-//     name: 'product_id',
-//     allowNull: false,
-//   }
-// });
-// Product.belongsTo(ProductTag);
-
-// Product.hasOne(ProductTag, {
-//   // foreignKey: 'product_tag_id'
-// });
-// ProductTag.hasMany(Product);
-
 Product.hasMany(ProductTag);
 ProductTag.belongsTo(Product);
 
 Tag.hasMany(ProductTag);
 ProductTag.belongsTo(Tag);
+
+// Products belongToMany Tags (through ProductTag)
 
 Product.belongsToMany(Tag, {
   through: {
@@ -81,8 +54,3 @@ module.exports = {
   ProductTag,
 };
 
-// Package the Category and Product models and export them as an object so we can import them together and use their proper names
-// module.exports = { Product, Category };
-// module.exports = { Category, Product };
-// module.exports = { Product, ProductTag };
-// module.exports = { Tag, ProductTag, Product };
